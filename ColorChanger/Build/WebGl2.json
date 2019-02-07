@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "WebProject2",
+"dataUrl": "WebGl2.data.unityweb",
+"wasmCodeUrl": "WebGl2.wasm.code.unityweb",
+"wasmFrameworkUrl": "WebGl2.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
