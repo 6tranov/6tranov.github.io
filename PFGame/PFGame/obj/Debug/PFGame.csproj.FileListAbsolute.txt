@@ -1,0 +1,7 @@
+C:\Users\KAZUAKI\Desktop\PFGame\PFGame\bin\Debug\PFGame.exe.config
+C:\Users\KAZUAKI\Desktop\PFGame\PFGame\bin\Debug\PFGame.exe
+C:\Users\KAZUAKI\Desktop\PFGame\PFGame\bin\Debug\PFGame.pdb
+C:\Users\KAZUAKI\Desktop\PFGame\PFGame\obj\Debug\PFGame.csprojAssemblyReference.cache
+C:\Users\KAZUAKI\Desktop\PFGame\PFGame\obj\Debug\PFGame.csproj.CoreCompileInputs.cache
+C:\Users\KAZUAKI\Desktop\PFGame\PFGame\obj\Debug\PFGame.exe
+C:\Users\KAZUAKI\Desktop\PFGame\PFGame\obj\Debug\PFGame.pdb
