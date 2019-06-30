@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=6tranov" class="twitter-hashtag-button" data-text=""
+        data-show-count="false" data-size="large"></a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+    <script>
+        let score = getParameter("score");
+        let text = "";
+        let tweetButton = document.querySelector("a");
+        let p = document.querySelector("p");
+
+        if (score === "") {
+            setPText("<<エラー>>scoreパラメータがありません。");
+            setGameHT();
+            document.querySelector("body").removeChild(tweetButton);
+        } else if (isNaN(score)) {
+            setPText("<<エラー>>scoreパラメータが数値ではありません。");
+            setGameHT();
+            document.querySelector("body").removeChild(tweetButton);
+        } else {
+            setPText("あなたの点数は" + score + "点でした！下のボタンから結果をツイートできます。");
+            let tweetText = "素因数ゲームで" + score + "点取得しました！\nhttps://6tranov.github.io/";
+            tweetButton.setAttribute("data-text", tweetText);
+        }
+
+        function setPText(text) {
+            p.textContent = text;
+        }
+
+        function setGameHT() {
+            document.write("<a href='https://6tranov.github.io/'>ここから</a>ゲームを遊べます!");
+        }
+
+        function getParameter(key) {
+            var str = location.search.split("?");
+            if (str.length < 2) {
+                return "";
+            }
+
+            var params = str[1].split("&");
+            for (var i = 0; i < params.length; i++) {
+                var keyVal = params[i].split("=");
+                if (keyVal[0] == key && keyVal.length == 2) {
+                    return decodeURIComponent(keyVal[1]);
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+
+</html>
