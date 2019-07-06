@@ -104,7 +104,6 @@ function draw() {
     });
 
     let ul = document.getElementById("colorGrid");
-    let colors = ["blue", "navy", "teal", "green", "lime", "aqua", "yellow", "red", "fuchsia", "olive", "purple", "maroon"];
     for (let r = 0; r < 257; r += 128) {
         for (let g = 0; g < 257; g += 128) {
             for (let b = 0; b < 257; b += 128) {
