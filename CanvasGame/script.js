@@ -93,7 +93,7 @@ function draw() {
     let save = document.getElementById("save");
     save.addEventListener("click", function () {
         //let drawing = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-        //window.open(drawing, "save");
+        //window.open(drawing, "save");//aiueo
 
 
         if (canvas.msToBlob) {
@@ -110,10 +110,6 @@ function draw() {
             let base64 = canvas.toDataURL("image/png");
             location.href = base64;
             
-            //動かない
-            let link = document.createElement("a");
-            link.href = window.URL.createObjectURL(blob);
-            link.click();
             */
             //一応動くがファイル名を指定できない
             //let drawing = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
@@ -121,6 +117,38 @@ function draw() {
 
         }
     });
+
+    let ul = document.getElementById("colorGrid");
+    let colors = ["blue", "navy", "teal", "green", "lime", "aqua", "yellow", "red", "fuchsia", "olive", "purple", "maroon"];
+    for (let r = 0; r < 257; r += 128) {
+        for (let g = 0; g < 257; g += 128) {
+            for (let b = 0; b < 257; b += 128) {
+                let red = Math.min(255, r);
+                let green = Math.min(255, g);
+                let blue = Math.min(255, b);
+
+                function to16(num) {
+                    return ("0" + num.toString(16)).slice(-2);
+                }
+
+                let li = document.createElement("li");
+                li.style = "background-color:#" + to16(red) + to16(green) + to16(blue) + ";cursor:pointer;width:30px;height:30px;display:inline-block;";
+                let changeColor = function () {
+                    //ctx.strokeStyle = "rgb(" + red + "," + blue + "," + green + ")";
+                    rRange.value = red;
+                    gRange.value = green;
+                    bRange.value = blue;
+                    rChange();
+                    gChange();
+                    bChange();
+                    console.log("color is now rgb(" + red + "," + blue + "," + green + ")");
+                }
+                li.addEventListener("click", changeColor);
+
+                ul.appendChild(li);
+            }
+        }
+    }
 }
 
 function penColorByColor(color) {

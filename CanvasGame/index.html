@@ -12,12 +12,15 @@
 <body onload="draw();">
     <div id="colorButtons">
         <input type="radio" id="radioBlack" name="radio" onclick="penColorByColor('black');" checked="checked"><label
-            for="radioBlack">black</label>
+            for="radioBlack">ペン(実装予定)</label>
         <input type="radio" id="radioWhite" name="radio" onclick="penColorByColor('white');"><label
-            for="radioWhite">white</label>
+            for="radioWhite">消しゴム（実装予定）</label>
     </div>
     <button id="save">画像を保存</button>
     <button id="clear">All clear</button>
+    <ul id="colorGrid">
+
+    </ul>
     <div id="lineWidthText">ペンの太さ:10</div><input type="range" id="lineWidth" min="1" max="20" step="1" value="10">
     <div id="rText">R:0</div><input type="range" name="R" id="rRange" min="0" max="255" step="1" value="0">
     <div id="gText">G:0</div><input type="range" name="G" id="gRange" min="0" max="255" step="1" value="0">
