@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body onload="draw();">
+    <div id="colorButtons">
+        <input type="radio" id="radioBlack" name="radio" onclick="penColorByColor('black');" checked="checked"><label
+            for="radioBlack">black</label>
+        <input type="radio" id="radioWhite" name="radio" onclick="penColorByColor('white');"><label
+            for="radioWhite">white</label>
+    </div>
+    <button id="save">画像を保存</button>
+    <button id="clear">All clear</button>
+    <div id="lineWidthText">ペンの太さ:10</div><input type="range" id="lineWidth" min="1" max="20" step="1" value="10">
+    <div id="rText">R:0</div><input type="range" name="R" id="rRange" min="0" max="255" step="1" value="0">
+    <div id="gText">G:0</div><input type="range" name="G" id="gRange" min="0" max="255" step="1" value="0">
+    <div id="bText">B:0</div><input type="range" name="B" id="bRange" min="0" max="255" step="1" value="0">
+    <canvas id="canvas" style="border:1px solid black;">Use the other browser or you cannnot play this game.</canvas>
+</body>
+
+</html>
