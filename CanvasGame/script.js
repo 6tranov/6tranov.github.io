@@ -35,7 +35,6 @@ function draw() {
             mouse.yFormer = mouse.yNow;
         }
     });
-    alert(38);
 
     canvas.addEventListener("mousedown", function (e) {
         console.log("mouse down");
@@ -79,7 +78,6 @@ function draw() {
     }
     bRange.addEventListener("change", bChange);
     bRange.addEventListener("mousemove", bChange);
-    alert(82);
 
     let lineWidthElement = document.getElementById("lineWidth");
     let lineWidthText = document.getElementById("lineWidthText");
@@ -105,7 +103,6 @@ function draw() {
         }
     });
 
-alert(106);
 
     let ul = document.getElementById("colorGrid");
     for (let r = 0; r < 257; r += 128) {
